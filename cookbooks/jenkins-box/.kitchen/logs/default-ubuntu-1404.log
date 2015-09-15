@@ -1,0 +1,238 @@
+I, [2015-09-13T14:58:12.692859 #2712]  INFO -- default-ubuntu-1404: -----> Converging <default-ubuntu-1404>...
+I, [2015-09-13T14:58:12.693237 #2712]  INFO -- default-ubuntu-1404: Preparing files for transfer
+I, [2015-09-13T14:58:12.693301 #2712]  INFO -- default-ubuntu-1404: Preparing dna.json
+I, [2015-09-13T14:58:12.693472 #2712]  INFO -- default-ubuntu-1404: Resolving cookbook dependencies with Berkshelf 3.2.4...
+I, [2015-09-13T14:58:13.232412 #2712]  INFO -- default-ubuntu-1404: Removing non-cookbook files before transfer
+I, [2015-09-13T14:58:13.243897 #2712]  INFO -- default-ubuntu-1404: Preparing validation.pem
+I, [2015-09-13T14:58:13.244190 #2712]  INFO -- default-ubuntu-1404: Preparing client.rb
+I, [2015-09-13T14:58:13.464819 #2712]  INFO -- default-ubuntu-1404: -----> Chef Omnibus installation detected (install only if missing)
+I, [2015-09-13T14:58:13.504875 #2712]  INFO -- default-ubuntu-1404: Transferring files to <default-ubuntu-1404>
+I, [2015-09-13T14:58:32.891494 #2712]  INFO -- default-ubuntu-1404: Starting Chef Client, version 12.4.1
+I, [2015-09-13T14:58:34.490917 #2712]  INFO -- default-ubuntu-1404: [2015-09-13T19:58:21+00:00] WARN: Child with name 'dna.json' found in multiple directories: /tmp/kitchen/dna.json and /tmp/kitchen/dna.json
+I, [2015-09-13T14:58:34.528749 #2712]  INFO -- default-ubuntu-1404: resolving cookbooks for run list: ["jenkins-box::default"]
+I, [2015-09-13T14:58:38.905537 #2712]  INFO -- default-ubuntu-1404: Synchronizing Cookbooks:
+I, [2015-09-13T14:58:38.906560 #2712]  INFO -- default-ubuntu-1404: - iptables
+I, [2015-09-13T14:58:38.924063 #2712]  INFO -- default-ubuntu-1404:   - nginx
+I, [2015-09-13T14:58:38.924128 #2712]  INFO -- default-ubuntu-1404:   - jenkins-box
+I, [2015-09-13T14:58:38.924583 #2712]  INFO -- default-ubuntu-1404: - nodejs
+I, [2015-09-13T14:58:38.928132 #2712]  INFO -- default-ubuntu-1404:   - yum
+I, [2015-09-13T14:58:38.931478 #2712]  INFO -- default-ubuntu-1404:   - build-essential
+I, [2015-09-13T14:58:38.931899 #2712]  INFO -- default-ubuntu-1404:   - apt
+I, [2015-09-13T14:58:38.933919 #2712]  INFO -- default-ubuntu-1404:   - yum-epel
+I, [2015-09-13T14:58:38.939166 #2712]  INFO -- default-ubuntu-1404:   - ark
+I, [2015-09-13T14:58:38.941952 #2712]  INFO -- default-ubuntu-1404:   - packagecloud
+I, [2015-09-13T14:58:38.949222 #2712]  INFO -- default-ubuntu-1404:   - jenkins
+I, [2015-09-13T14:58:38.949992 #2712]  INFO -- default-ubuntu-1404:   - 7-zip
+I, [2015-09-13T14:58:38.951568 #2712]  INFO -- default-ubuntu-1404:   - chef_gem
+I, [2015-09-13T14:58:38.951878 #2712]  INFO -- default-ubuntu-1404:   - bluepill
+I, [2015-09-13T14:58:38.952195 #2712]  INFO -- default-ubuntu-1404:   - rvm
+I, [2015-09-13T14:58:38.952609 #2712]  INFO -- default-ubuntu-1404:   - homebrew
+I, [2015-09-13T14:58:38.952900 #2712]  INFO -- default-ubuntu-1404:   - runit
+I, [2015-09-13T14:58:38.953289 #2712]  INFO -- default-ubuntu-1404:   - ohai
+I, [2015-09-13T14:58:38.953584 #2712]  INFO -- default-ubuntu-1404:   - rsyslog
+I, [2015-09-13T14:58:38.953964 #2712]  INFO -- default-ubuntu-1404:   - chef_handler
+I, [2015-09-13T14:58:38.954264 #2712]  INFO -- default-ubuntu-1404:   - windows
+I, [2015-09-13T14:58:38.955847 #2712]  INFO -- default-ubuntu-1404: Compiling Cookbooks...
+I, [2015-09-13T14:58:38.984279 #2712]  INFO -- default-ubuntu-1404: [2015-09-13T19:58:25+00:00] WARN: The on_platforms option to node_map has been deprecated
+I, [2015-09-13T14:58:39.074877 #2712]  INFO -- default-ubuntu-1404: Recipe: ohai::default
+I, [2015-09-13T14:58:39.076932 #2712]  INFO -- default-ubuntu-1404:   * remote_directory[/etc/chef/ohai_plugins for cookbook ohai] action create
+I, [2015-09-13T14:58:39.077249 #2712]  INFO -- default-ubuntu-1404:   Recipe: <Dynamically Defined Resource>
+I, [2015-09-13T14:58:39.084078 #2712]  INFO -- default-ubuntu-1404:     * cookbook_file[/etc/chef/ohai_plugins/README] action create (up to date)
+I, [2015-09-13T14:58:39.084486 #2712]  INFO -- default-ubuntu-1404:      (up to date)
+I, [2015-09-13T14:58:39.085314 #2712]  INFO -- default-ubuntu-1404: Recipe: ohai::default
+I, [2015-09-13T14:58:39.087071 #2712]  INFO -- default-ubuntu-1404:   * ohai[custom_plugins] action reload[2015-09-13T19:58:25+00:00] WARN: [DEPRECATION] Plugin at /etc/chef/ohai_plugins/nginx.rb is a version 6 plugin. Version 6 plugins will not be supported in future releases of Ohai. Please upgrade your plugin to version 7 plugin syntax. For more information visit here: docs.chef.io/ohai_custom.html
+I, [2015-09-13T14:58:39.131388 #2712]  INFO -- default-ubuntu-1404: /opt/chef/embedded/lib/ruby/gems/2.1.0/gems/ohai-8.5.0/lib/ohai/plugins/solaris2/network.rb:57: warning: already initialized constant ETHERNET_ENCAPS
+I, [2015-09-13T14:58:39.131461 #2712]  INFO -- default-ubuntu-1404: /opt/chef/embedded/lib/ruby/gems/2.1.0/gems/ohai-8.5.0/lib/ohai/plugins/solaris2/network.rb:57: warning: previous definition of ETHERNET_ENCAPS was here
+I, [2015-09-13T14:58:41.054385 #2712]  INFO -- default-ubuntu-1404: 
+I, [2015-09-13T14:58:41.058344 #2712]  INFO -- default-ubuntu-1404:     - re-run ohai and merge results into node attributes
+I, [2015-09-13T14:58:41.071631 #2712]  INFO -- default-ubuntu-1404: [2015-09-13T19:58:27+00:00] WARN: Cloning resource attributes for service[nginx] from prior resource (CHEF-3694)
+I, [2015-09-13T14:58:41.071977 #2712]  INFO -- default-ubuntu-1404: [2015-09-13T19:58:27+00:00] WARN: Previous service[nginx]: /tmp/kitchen/cache/cookbooks/nginx/recipes/package.rb:47:in `from_file'
+I, [2015-09-13T14:58:41.072268 #2712]  INFO -- default-ubuntu-1404: [2015-09-13T19:58:27+00:00] WARN: Current  service[nginx]: /tmp/kitchen/cache/cookbooks/nginx/recipes/default.rb:24:in `from_file'
+I, [2015-09-13T14:58:41.079963 #2712]  INFO -- default-ubuntu-1404: [2015-09-13T19:58:27+00:00] WARN: chef_gem[rvm] chef_gem compile_time installation is deprecated
+I, [2015-09-13T14:58:41.080052 #2712]  INFO -- default-ubuntu-1404: [2015-09-13T19:58:27+00:00] WARN: chef_gem[rvm] Please set `compile_time false` on the resource to use the new behavior.
+I, [2015-09-13T14:58:41.080088 #2712]  INFO -- default-ubuntu-1404: [2015-09-13T19:58:27+00:00] WARN: chef_gem[rvm] or set `compile_time true` on the resource if compile_time behavior is required.
+I, [2015-09-13T14:58:41.080142 #2712]  INFO -- default-ubuntu-1404: Recipe: rvm::default
+I, [2015-09-13T14:58:41.265070 #2712]  INFO -- default-ubuntu-1404:  (up to date)
+I, [2015-09-13T14:58:41.284792 #2712]  INFO -- default-ubuntu-1404: /tmp/kitchen/cache/cookbooks/rvm/libraries/rvm_chef_user_environment.rb:49: warning: class variable access from toplevel
+I, [2015-09-13T14:58:41.323151 #2712]  INFO -- default-ubuntu-1404: [2015-09-13T19:58:28+00:00] WARN: Cloning resource attributes for rvm_global_gem[bundler] from prior resource (CHEF-3694)
+I, [2015-09-13T14:58:41.323225 #2712]  INFO -- default-ubuntu-1404: [2015-09-13T19:58:28+00:00] WARN: Previous rvm_global_gem[bundler]: /tmp/kitchen/cache/cookbooks/rvm/libraries/chef_rvm_recipe_helpers.rb:191:in `block in install_rubies'
+I, [2015-09-13T14:58:41.323254 #2712]  INFO -- default-ubuntu-1404: [2015-09-13T19:58:28+00:00] WARN: Current  rvm_global_gem[bundler]: /tmp/kitchen/cache/cookbooks/rvm/libraries/chef_rvm_recipe_helpers.rb:191:in `block in install_rubies'
+I, [2015-09-13T14:58:41.323516 #2712]  INFO -- default-ubuntu-1404: Converging 84 resources
+I, [2015-09-13T14:58:41.324947 #2712]  INFO -- default-ubuntu-1404: Recipe: apt::default
+I, [2015-09-13T14:58:41.325533 #2712]  INFO -- default-ubuntu-1404:   * file[/var/lib/apt/periodic/update-success-stamp] action nothing (skipped due to action :nothing)
+I, [2015-09-13T14:58:41.326839 #2712]  INFO -- default-ubuntu-1404:   * directory[/etc/apt/apt.conf.d] action create (up to date)
+I, [2015-09-13T14:58:41.329143 #2712]  INFO -- default-ubuntu-1404:   * cookbook_file[/etc/apt/apt.conf.d/15update-stamp] action create (up to date)
+I, [2015-09-13T14:58:41.329723 #2712]  INFO -- default-ubuntu-1404:   * execute[apt-get-update] action run (skipped due to not_if)
+I, [2015-09-13T14:58:41.330372 #2712]  INFO -- default-ubuntu-1404:   * execute[apt-get update] action nothing (skipped due to action :nothing)
+I, [2015-09-13T14:58:41.330954 #2712]  INFO -- default-ubuntu-1404:   * execute[apt-get autoremove] action nothing (skipped due to action :nothing)
+I, [2015-09-13T14:58:41.331401 #2712]  INFO -- default-ubuntu-1404:   * execute[apt-get autoclean] action nothing (skipped due to action :nothing)
+I, [2015-09-13T14:58:41.332270 #2712]  INFO -- default-ubuntu-1404:   * execute[apt-get-update-periodic] action run (skipped due to only_if)
+I, [2015-09-13T14:58:41.333610 #2712]  INFO -- default-ubuntu-1404:   * directory[/var/cache/local] action create (up to date)
+I, [2015-09-13T14:58:41.335449 #2712]  INFO -- default-ubuntu-1404:   * directory[/var/cache/local/preseeding] action create (up to date)
+I, [2015-09-13T14:58:41.335696 #2712]  INFO -- default-ubuntu-1404: Recipe: jenkins-box::default
+I, [2015-09-13T14:58:41.373502 #2712]  INFO -- default-ubuntu-1404:   * apt_package[git] action install (up to date)
+I, [2015-09-13T14:58:41.373580 #2712]  INFO -- default-ubuntu-1404: Recipe: iptables::default
+I, [2015-09-13T14:58:41.420844 #2712]  INFO -- default-ubuntu-1404:  (up to date)
+I, [2015-09-13T14:58:41.420929 #2712]  INFO -- default-ubuntu-1404:   * execute[rebuild-iptables] action nothing (skipped due to action :nothing)
+I, [2015-09-13T14:58:41.420956 #2712]  INFO -- default-ubuntu-1404:   * directory[/etc/iptables.d] action create (up to date)
+I, [2015-09-13T14:58:41.420979 #2712]  INFO -- default-ubuntu-1404:   * template[/usr/sbin/rebuild-iptables] action create (up to date)
+I, [2015-09-13T14:58:41.421002 #2712]  INFO -- default-ubuntu-1404:   * template[/etc/network/if-pre-up.d/iptables_load] action create (up to date)
+I, [2015-09-13T14:58:41.421037 #2712]  INFO -- default-ubuntu-1404: Recipe: jenkins-box::default
+I, [2015-09-13T14:58:41.421059 #2712]  INFO -- default-ubuntu-1404:   * iptables_rule[http] action enable
+I, [2015-09-13T14:58:41.421081 #2712]  INFO -- default-ubuntu-1404:     * execute[rebuild-iptables] action nothing (skipped due to action :nothing)
+I, [2015-09-13T14:58:41.421537 #2712]  INFO -- default-ubuntu-1404:  (up to date)
+I, [2015-09-13T14:58:41.421927 #2712]  INFO -- default-ubuntu-1404:      (up to date)
+I, [2015-09-13T14:58:41.423831 #2712]  INFO -- default-ubuntu-1404:   * iptables_rule[ssh] action enable
+I, [2015-09-13T14:58:41.424794 #2712]  INFO -- default-ubuntu-1404:     * execute[rebuild-iptables] action nothing (skipped due to action :nothing)
+I, [2015-09-13T14:58:41.429092 #2712]  INFO -- default-ubuntu-1404:     * template[/etc/iptables.d/ssh] action create (up to date)
+I, [2015-09-13T14:58:41.429502 #2712]  INFO -- default-ubuntu-1404:      (up to date)
+I, [2015-09-13T14:58:41.429719 #2712]  INFO -- default-ubuntu-1404: Recipe: jenkins::_master_package
+I, [2015-09-13T14:58:41.433538 #2712]  INFO -- default-ubuntu-1404:   * apt_repository[jenkins] action add
+I, [2015-09-13T14:58:41.560383 #2712]  INFO -- default-ubuntu-1404:     * remote_file[/tmp/kitchen/cache/jenkins-ci.org.key] action create (up to date)
+I, [2015-09-13T14:58:41.690563 #2712]  INFO -- default-ubuntu-1404:     * execute[install-key jenkins-ci.org.key] action run (skipped due to not_if)
+I, [2015-09-13T14:58:41.690649 #2712]  INFO -- default-ubuntu-1404:     * file[/var/lib/apt/periodic/update-success-stamp] action nothing (skipped due to action :nothing)
+I, [2015-09-13T14:58:41.690680 #2712]  INFO -- default-ubuntu-1404:     * execute[apt-cache gencaches] action nothing (skipped due to action :nothing)
+I, [2015-09-13T14:58:41.690708 #2712]  INFO -- default-ubuntu-1404:     * execute[apt-get update] action nothing (skipped due to action :nothing)
+I, [2015-09-13T14:58:41.690735 #2712]  INFO -- default-ubuntu-1404:     * file[/etc/apt/sources.list.d/jenkins.list] action create (up to date)
+I, [2015-09-13T14:58:41.690761 #2712]  INFO -- default-ubuntu-1404:      (up to date)
+I, [2015-09-13T14:58:41.738387 #2712]  INFO -- default-ubuntu-1404:  (up to date)
+I, [2015-09-13T14:58:41.738474 #2712]  INFO -- default-ubuntu-1404:   * template[/etc/default/jenkins] action create (up to date)
+I, [2015-09-13T14:58:41.806461 #2712]  INFO -- default-ubuntu-1404:  (up to date)
+I, [2015-09-13T14:58:41.857815 #2712]  INFO -- default-ubuntu-1404:   * service[jenkins] action start (up to date)
+I, [2015-09-13T14:58:41.858318 #2712]  INFO -- default-ubuntu-1404: Recipe: nginx::ohai_plugin
+I, [2015-09-13T14:58:41.859225 #2712]  INFO -- default-ubuntu-1404:   * ohai[reload_nginx] action nothing (skipped due to action :nothing)
+I, [2015-09-13T14:58:41.862833 #2712]  INFO -- default-ubuntu-1404:   * template[/etc/chef/ohai_plugins/nginx.rb] action create (up to date)
+I, [2015-09-13T14:58:41.863270 #2712]  INFO -- default-ubuntu-1404: Recipe: ohai::default
+I, [2015-09-13T14:58:41.864305 #2712]  INFO -- default-ubuntu-1404:   * remote_directory[/etc/chef/ohai_plugins for cookbook ohai] action nothing (skipped due to action :nothing)
+I, [2015-09-13T14:58:41.864868 #2712]  INFO -- default-ubuntu-1404:   * ohai[custom_plugins] action nothing (skipped due to action :nothing)
+I, [2015-09-13T14:58:41.865198 #2712]  INFO -- default-ubuntu-1404: Recipe: nginx::package
+I, [2015-09-13T14:58:41.881467 #2712]  INFO -- default-ubuntu-1404:   * apt_package[nginx] action install (skipped due to not_if)
+I, [2015-09-13T14:58:41.928638 #2712]  INFO -- default-ubuntu-1404:   * service[nginx] action enable (up to date)
+I, [2015-09-13T14:58:41.929184 #2712]  INFO -- default-ubuntu-1404: Recipe: nginx::commons_dir
+I, [2015-09-13T14:58:41.931558 #2712]  INFO -- default-ubuntu-1404:   * directory[/etc/nginx] action create (up to date)
+I, [2015-09-13T14:58:41.933551 #2712]  INFO -- default-ubuntu-1404:   * directory[/var/log/nginx] action create (up to date)
+I, [2015-09-13T14:58:41.935431 #2712]  INFO -- default-ubuntu-1404:   * directory[/run] action create (up to date)
+I, [2015-09-13T14:58:41.937497 #2712]  INFO -- default-ubuntu-1404:   * directory[/etc/nginx/sites-available] action create (up to date)
+I, [2015-09-13T14:58:41.939268 #2712]  INFO -- default-ubuntu-1404:   * directory[/etc/nginx/sites-enabled] action create (up to date)
+I, [2015-09-13T14:58:41.941427 #2712]  INFO -- default-ubuntu-1404:   * directory[/etc/nginx/conf.d] action create (up to date)
+I, [2015-09-13T14:58:41.941818 #2712]  INFO -- default-ubuntu-1404: Recipe: nginx::commons_script
+I, [2015-09-13T14:58:41.946402 #2712]  INFO -- default-ubuntu-1404:   * template[/usr/sbin/nxensite] action create (up to date)
+I, [2015-09-13T14:58:41.950605 #2712]  INFO -- default-ubuntu-1404:   * template[/usr/sbin/nxdissite] action create (up to date)
+I, [2015-09-13T14:58:41.950900 #2712]  INFO -- default-ubuntu-1404: Recipe: nginx::commons_conf
+I, [2015-09-13T14:58:41.960614 #2712]  INFO -- default-ubuntu-1404:   * template[nginx.conf] action create (up to date)
+I, [2015-09-13T14:58:41.960836 #2712]  INFO -- default-ubuntu-1404: 
+I, [2015-09-13T14:58:41.978551 #2712]  INFO -- default-ubuntu-1404:   * execute[nxensite default] action run
+I, [2015-09-13T14:58:41.978950 #2712]  INFO -- default-ubuntu-1404:     - execute /usr/sbin/nxensite default
+I, [2015-09-13T14:58:41.979221 #2712]  INFO -- default-ubuntu-1404: Recipe: nginx::default
+I, [2015-09-13T14:58:42.034419 #2712]  INFO -- default-ubuntu-1404:   * service[nginx] action start (up to date)
+I, [2015-09-13T14:58:42.034501 #2712]  INFO -- default-ubuntu-1404: Recipe: jenkins-box::nginx
+I, [2015-09-13T14:58:42.048816 #2712]  INFO -- default-ubuntu-1404: 
+I, [2015-09-13T14:58:42.048882 #2712]  INFO -- default-ubuntu-1404:     - execute /usr/sbin/nxdissite default
+I, [2015-09-13T14:58:42.048911 #2712]  INFO -- default-ubuntu-1404:   * template[/etc/nginx/sites-available/jenkins] action create (up to date)
+I, [2015-09-13T14:58:42.048937 #2712]  INFO -- default-ubuntu-1404:   * execute[nxensite jenkins] action run (skipped due to not_if)
+I, [2015-09-13T14:58:42.048962 #2712]  INFO -- default-ubuntu-1404: Recipe: jenkins-box::default
+I, [2015-09-13T14:58:42.049339 #2712]  INFO -- default-ubuntu-1404:  (up to date)
+I, [2015-09-13T14:58:42.051644 #2712]  INFO -- default-ubuntu-1404:   * template[/var/lib/jenkins/my_database.yml] action create (up to date)
+I, [2015-09-13T14:58:42.051909 #2712]  INFO -- default-ubuntu-1404: Recipe: rvm::default
+I, [2015-09-13T14:58:42.069055 #2712]  INFO -- default-ubuntu-1404:   * chef_gem[rvm] action install (up to date)
+I, [2015-09-13T14:58:42.069132 #2712]  INFO -- default-ubuntu-1404: Recipe: rvm::system_install
+I, [2015-09-13T14:58:42.101483 #2712]  INFO -- default-ubuntu-1404:  (up to date)
+I, [2015-09-13T14:58:42.121701 #2712]  INFO -- default-ubuntu-1404:  (up to date)
+I, [2015-09-13T14:58:42.161672 #2712]  INFO -- default-ubuntu-1404:   * apt_package[tar] action install (up to date)
+I, [2015-09-13T14:58:42.200752 #2712]  INFO -- default-ubuntu-1404:  (up to date)
+I, [2015-09-13T14:58:42.239679 #2712]  INFO -- default-ubuntu-1404:  (up to date)
+I, [2015-09-13T14:58:42.280032 #2712]  INFO -- default-ubuntu-1404:  (up to date)
+I, [2015-09-13T14:58:42.325469 #2712]  INFO -- default-ubuntu-1404:  (up to date)
+I, [2015-09-13T14:58:42.368825 #2712]  INFO -- default-ubuntu-1404:  (up to date)
+I, [2015-09-13T14:58:42.370112 #2712]  INFO -- default-ubuntu-1404: 
+I, [2015-09-13T14:58:42.370426 #2712]  INFO -- default-ubuntu-1404:     - update content in file /etc/rvmrc from ccd059 to 9090e1
+I, [2015-09-13T14:58:42.371303 #2712]  INFO -- default-ubuntu-1404:     --- /etc/rvmrc	2015-09-13 19:50:04.250410415 +0000
+I, [2015-09-13T14:58:42.371809 #2712]  INFO -- default-ubuntu-1404:     +++ /tmp/chef-rendered-template20150913-2838-1yu2v4y	2015-09-13 19:58:29.110704850 +0000
+I, [2015-09-13T14:58:42.372167 #2712]  INFO -- default-ubuntu-1404:     @@ -6,5 +6,4 @@
+I, [2015-09-13T14:58:42.372482 #2712]  INFO -- default-ubuntu-1404:      export rvm_path="/usr/local/rvm"
+I, [2015-09-13T14:58:42.372849 #2712]  INFO -- default-ubuntu-1404:      
+I, [2015-09-13T14:58:42.373165 #2712]  INFO -- default-ubuntu-1404:      export rvm_gem_options="--no-rdoc --no-ri"
+I, [2015-09-13T14:58:42.374490 #2712]  INFO -- default-ubuntu-1404:     -umask u=rwx,g=rwx,o=rx
+I, [2015-09-13T14:58:42.375189 #2712]  INFO -- default-ubuntu-1404:     - change mode from '0664' to '0644'
+I, [2015-09-13T14:58:42.508822 #2712]  INFO -- default-ubuntu-1404:   * execute[install system-wide RVM] action run (skipped due to not_if)
+I, [2015-09-13T14:58:42.508917 #2712]  INFO -- default-ubuntu-1404:   * execute[upgrade system-wide RVM to none] action run (skipped due to not_if)
+I, [2015-09-13T14:58:42.508939 #2712]  INFO -- default-ubuntu-1404: Recipe: rvm::system
+I, [2015-09-13T14:58:42.616881 #2712]  INFO -- default-ubuntu-1404: /tmp/kitchen/cache/cookbooks/rvm/libraries/rvm_chef_user_environment.rb:32: warning: class variable access from toplevel
+I, [2015-09-13T14:58:43.094644 #2712]  INFO -- default-ubuntu-1404:  (up to date)
+I, [2015-09-13T14:58:43.095623 #2712]  INFO -- default-ubuntu-1404:   * rvm_global_gem[bundler] action install/tmp/kitchen/cache/cookbooks/rvm/libraries/rvm_chef_user_environment.rb:32: warning: class variable access from toplevel
+I, [2015-09-13T14:58:43.096569 #2712]  INFO -- default-ubuntu-1404: 
+I, [2015-09-13T14:58:43.113399 #2712]  INFO -- default-ubuntu-1404:     * execute[Add bundler to /usr/local/rvm/gemsets/global.gems] action run (skipped due to not_if)
+I, [2015-09-13T14:58:47.369171 #2712]  INFO -- default-ubuntu-1404:     * rvm_gem[bundler] action install (up to date)
+I, [2015-09-13T14:58:47.369930 #2712]  INFO -- default-ubuntu-1404:      (up to date)
+I, [2015-09-13T14:58:47.370971 #2712]  INFO -- default-ubuntu-1404:   * execute[Add bundler to /usr/local/rvm/gemsets/global.gems] action nothing (skipped due to action :nothing)
+I, [2015-09-13T14:58:47.372019 #2712]  INFO -- default-ubuntu-1404:   * rvm_gem[bundler] action nothing (skipped due to action :nothing)
+I, [2015-09-13T14:58:47.372914 #2712]  INFO -- default-ubuntu-1404:   * group[rvm] action create (skipped due to only_if)
+I, [2015-09-13T14:58:47.373474 #2712]  INFO -- default-ubuntu-1404: Recipe: rvm::user_install
+I, [2015-09-13T14:58:47.422357 #2712]  INFO -- default-ubuntu-1404:   * apt_package[sed] action install (up to date)
+I, [2015-09-13T14:58:47.468042 #2712]  INFO -- default-ubuntu-1404:  (up to date)
+I, [2015-09-13T14:58:47.511487 #2712]  INFO -- default-ubuntu-1404:  (up to date)
+I, [2015-09-13T14:58:47.554987 #2712]  INFO -- default-ubuntu-1404:  (up to date)
+I, [2015-09-13T14:58:47.602984 #2712]  INFO -- default-ubuntu-1404:  (up to date)
+I, [2015-09-13T14:58:47.648874 #2712]  INFO -- default-ubuntu-1404:   * apt_package[bash] action install (up to date)
+I, [2015-09-13T14:58:47.694408 #2712]  INFO -- default-ubuntu-1404:  (up to date)
+I, [2015-09-13T14:58:47.743950 #2712]  INFO -- default-ubuntu-1404:  (up to date)
+I, [2015-09-13T14:58:47.744036 #2712]  INFO -- default-ubuntu-1404:   * template[/var/lib/jenkins/.rvmrc] action create
+I, [2015-09-13T14:58:47.744066 #2712]  INFO -- default-ubuntu-1404:     - change mode from '0664' to '0644'
+I, [2015-09-13T14:58:47.874847 #2712]  INFO -- default-ubuntu-1404:  (skipped due to not_if)
+I, [2015-09-13T14:58:47.874922 #2712]  INFO -- default-ubuntu-1404:   * execute[upgrade user RVM for jenkins to none] action run (skipped due to not_if)
+I, [2015-09-13T14:58:47.874948 #2712]  INFO -- default-ubuntu-1404: Recipe: rvm::user
+I, [2015-09-13T14:58:48.487022 #2712]  INFO -- default-ubuntu-1404:  (up to date)
+I, [2015-09-13T14:58:48.488732 #2712]  INFO -- default-ubuntu-1404:   * rvm_global_gem[bundler] action install
+I, [2015-09-13T14:58:48.505639 #2712]  INFO -- default-ubuntu-1404:     * execute[Add bundler to /var/lib/jenkins/.rvm/gemsets/global.gems] action run (skipped due to not_if)
+I, [2015-09-13T14:58:48.986219 #2712]  INFO -- default-ubuntu-1404: [2015-09-13T19:58:35+00:00] WARN: Cloning resource attributes for rvm_gem[bundler] from prior resource (CHEF-3694)
+I, [2015-09-13T14:58:48.986516 #2712]  INFO -- default-ubuntu-1404: [2015-09-13T19:58:35+00:00] WARN: Previous rvm_gem[bundler]: /tmp/kitchen/cache/cookbooks/rvm/providers/global_gem.rb:48:in `gem_package_wrapper'
+I, [2015-09-13T14:58:48.986726 #2712]  INFO -- default-ubuntu-1404: [2015-09-13T19:58:35+00:00] WARN: Current  rvm_gem[bundler]: /tmp/kitchen/cache/cookbooks/rvm/providers/global_gem.rb:48:in `gem_package_wrapper'
+I, [2015-09-13T14:58:50.897325 #2712]  INFO -- default-ubuntu-1404:     * rvm_gem[bundler] action install (up to date)
+I, [2015-09-13T14:58:50.898372 #2712]  INFO -- default-ubuntu-1404:      (up to date)
+I, [2015-09-13T14:58:50.899379 #2712]  INFO -- default-ubuntu-1404:   * execute[Add bundler to /var/lib/jenkins/.rvm/gemsets/global.gems] action nothing (skipped due to action :nothing)
+I, [2015-09-13T14:58:50.900521 #2712]  INFO -- default-ubuntu-1404:   * rvm_gem[bundler] action nothing (skipped due to action :nothing)
+I, [2015-09-13T14:58:50.900979 #2712]  INFO -- default-ubuntu-1404: Recipe: nodejs::repo
+I, [2015-09-13T14:58:50.957413 #2712]  INFO -- default-ubuntu-1404:   * apt_package[apt-transport-https] action install (up to date)
+I, [2015-09-13T14:58:50.957504 #2712]  INFO -- default-ubuntu-1404:   * apt_repository[node.js] action add
+I, [2015-09-13T14:58:51.119790 #2712]  INFO -- default-ubuntu-1404:  (skipped due to not_if)
+I, [2015-09-13T14:58:51.187815 #2712]  INFO -- default-ubuntu-1404: 
+I, [2015-09-13T14:58:51.188196 #2712]  INFO -- default-ubuntu-1404:       - execute the ruby block validate-key 1655a0ab68576280
+I, [2015-09-13T14:58:51.189122 #2712]  INFO -- default-ubuntu-1404:     * file[/var/lib/apt/periodic/update-success-stamp] action nothing (skipped due to action :nothing)
+I, [2015-09-13T14:58:51.189724 #2712]  INFO -- default-ubuntu-1404:     * execute[apt-cache gencaches] action nothing (skipped due to action :nothing)
+I, [2015-09-13T14:58:51.190258 #2712]  INFO -- default-ubuntu-1404:     * execute[apt-get update] action nothing (skipped due to action :nothing)
+I, [2015-09-13T14:58:51.192850 #2712]  INFO -- default-ubuntu-1404:     * file[/etc/apt/sources.list.d/node.js.list] action create (up to date)
+I, [2015-09-13T14:58:51.193097 #2712]  INFO -- default-ubuntu-1404:   
+I, [2015-09-13T14:58:51.193291 #2712]  INFO -- default-ubuntu-1404: Recipe: nodejs::nodejs_from_package
+I, [2015-09-13T14:58:51.240912 #2712]  INFO -- default-ubuntu-1404:   * apt_package[nodejs] action install (up to date)
+I, [2015-09-13T14:58:51.240992 #2712]  INFO -- default-ubuntu-1404: Recipe: jenkins-box::default
+I, [2015-09-13T14:58:51.241024 #2712]  INFO -- default-ubuntu-1404:   * jenkins_plugin[ruby-runtime] action install
+I, [2015-09-13T14:58:51.241043 #2712]  INFO -- default-ubuntu-1404:   Recipe: <Dynamically Defined Resource>
+I, [2015-09-13T14:58:53.608916 #2712]  INFO -- default-ubuntu-1404:  (up to date)
+I, [2015-09-13T14:58:53.624612 #2712]  INFO -- default-ubuntu-1404:  (up to date)
+I, [2015-09-13T14:59:22.854644 #2712]  INFO -- default-ubuntu-1404:     * remote_file[/tmp/kitchen/cache/ruby-runtime-0.12.plugin] action create (up to date)
+I, [2015-09-13T14:59:22.917610 #2712]  INFO -- default-ubuntu-1404:     * remote_file[/tmp/kitchen/cache/jenkins-cli.jar] action create (up to date)
+I, [2015-09-13T14:59:31.949220 #2712]  INFO -- default-ubuntu-1404:     - Upgrade jenkins_plugin[ruby-runtime] from 0.7 to 0.12
+I, [2015-09-13T14:59:31.949292 #2712]  INFO -- default-ubuntu-1404: Recipe: jenkins::_master_package
+I, [2015-09-13T14:59:33.208871 #2712]  INFO -- default-ubuntu-1404: 
+I, [2015-09-13T14:59:33.208944 #2712]  INFO -- default-ubuntu-1404:     - restart service service[jenkins]
+I, [2015-09-13T14:59:33.208999 #2712]  INFO -- default-ubuntu-1404: Recipe: jenkins-box::default
+I, [2015-09-13T14:59:33.275448 #2712]  INFO -- default-ubuntu-1404:  (up to date)
+I, [2015-09-13T14:59:33.329759 #2712]  INFO -- default-ubuntu-1404:   * jenkins_plugin[git] action install
+I, [2015-09-13T14:59:33.330146 #2712]  INFO -- default-ubuntu-1404:   Recipe: <Dynamically Defined Resource>
+I, [2015-09-13T14:59:35.953871 #2712]  INFO -- default-ubuntu-1404:     * remote_file[/tmp/kitchen/cache/git-2.4.0.plugin] action create (up to date)
+I, [2015-09-13T14:59:58.300902 #2712]  INFO -- default-ubuntu-1404:     - Upgrade jenkins_plugin[git] from 2.0 to 2.4.0
+I, [2015-09-13T14:59:58.300980 #2712]  INFO -- default-ubuntu-1404: Recipe: jenkins-box::default
+I, [2015-09-13T14:59:58.322456 #2712]  INFO -- default-ubuntu-1404:  (up to date)
+I, [2015-09-13T14:59:58.351617 #2712]  INFO -- default-ubuntu-1404:   * jenkins_plugin[rake] action install (up to date)
+I, [2015-09-13T14:59:58.354009 #2712]  INFO -- default-ubuntu-1404:   * template[/var/tmp/run_tests.xml] action create (up to date)
+I, [2015-09-13T14:59:59.775848 #2712]  INFO -- default-ubuntu-1404:   * jenkins_job[run_test] action create (up to date)
+I, [2015-09-13T15:00:01.182244 #2712]  INFO -- default-ubuntu-1404:   * jenkins_command[safe-restart] action execute
+I, [2015-09-13T15:00:01.182320 #2712]  INFO -- default-ubuntu-1404:     - Execute jenkins_command[safe-restart]
+I, [2015-09-13T15:00:01.182391 #2712]  INFO -- default-ubuntu-1404: Recipe: nginx::default
+I, [2015-09-13T15:00:01.268996 #2712]  INFO -- default-ubuntu-1404: 
+I, [2015-09-13T15:00:01.270208 #2712]  INFO -- default-ubuntu-1404:     - reload service service[nginx]
+I, [2015-09-13T15:00:01.371772 #2712]  INFO -- default-ubuntu-1404: 
+I, [2015-09-13T15:00:01.372027 #2712]  INFO -- default-ubuntu-1404: Running handlers:
+I, [2015-09-13T15:00:01.372187 #2712]  INFO -- default-ubuntu-1404: Running handlers complete
+I, [2015-09-13T15:00:01.372402 #2712]  INFO -- default-ubuntu-1404: Chef Client finished, 12/87 resources updated in 87.042372786 seconds
+I, [2015-09-13T15:00:02.601847 #2712]  INFO -- default-ubuntu-1404: Finished converging <default-ubuntu-1404> (1m49.91s).

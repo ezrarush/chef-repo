@@ -28,7 +28,7 @@ jenkins_plugin 'ruby-runtime' do
 end
 
 jenkins_plugin 'rvm' do
-  notifies :restart, 'service[jenkins]', :deplayed
+  notifies :restart, 'service[jenkins]', :delayed
 end
 
 jenkins_plugin 'git'

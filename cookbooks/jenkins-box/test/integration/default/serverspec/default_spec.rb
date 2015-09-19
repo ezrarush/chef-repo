@@ -7,3 +7,28 @@ describe 'jenkins-box::default' do
     skip 'Replace this with meaningful tests'
   end
 end
+
+describe service('nginx') do
+  it { should be_enabled }
+  # it { should be_installed }
+  it { should be_running }
+end
+
+describe port(80) do
+  it { should be_listening }
+end
+
+describe service('jenkins') do
+  it { should be_enabled }
+  # it { should be_installed }
+  it { should be_running }
+end
+
+describe user('jenkins') do
+  it { should exist }
+  it { should have_home_directory '/var/lib/jenkins' }
+end
+
+# describe iptables do
+#   it { should have_rule('-P INPUT ACCEPT').with_table('mangle').with_chain('INPUT') }
+# end

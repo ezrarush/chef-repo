@@ -1,0 +1,12 @@
+name 'rails-box'
+maintainer 'Ezra Rush'
+maintainer_email 'rushwest@gmail.com'
+license 'MIT'
+description 'Installs/Configures rails-box'
+long_description 'Installs/Configures rails-box'
+version '0.1.0'
+
+depends 'apt'
+depends 'sqlite'
+depends 'nodejs'
+depends 'rbenv'

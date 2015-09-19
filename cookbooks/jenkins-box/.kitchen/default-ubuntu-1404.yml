@@ -1,6 +1,0 @@
----
-hostname: 127.0.0.1
-port: '2222'
-username: vagrant
-ssh_key: "/home/ezra/chef-repo/cookbooks/jenkins-box/.kitchen/kitchen-vagrant/kitchen-jenkins-box-default-ubuntu-1404/.vagrant/machines/default/virtualbox/private_key"
-last_action: converge

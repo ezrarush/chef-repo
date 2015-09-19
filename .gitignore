@@ -1,10 +1,16 @@
 .rake_test_cache
 
-###
 # Ignore Chef key files and secrets
-###
 .chef/*.pem
 .chef/encrypted_data_bag_secret
+
+
+# Test Kitchen and Berkshelf
+*/**/.kitchen/
+Berksfile.lock
+*/**/berks-cookbooks
+*/**/.chef/local-mode-cache/
+dna.json
 
 # emacs
 *~

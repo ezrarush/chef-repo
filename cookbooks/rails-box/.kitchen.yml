@@ -2,9 +2,7 @@
 driver:
   name: vagrant
   network:
-    - ["forwarded_port", {guest: 80, host: 8080}]
-    - ["private_network", {ip: "192.168.33.33"}]
-
+    - ["forwarded_port", {guest: 3000, host: 3000}]
 provisioner:
   name: chef_zero
 
@@ -17,5 +15,5 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[jenkins-box::default]
-    attributes:
+      - recipe[rails-box::default]
+    attributes: 

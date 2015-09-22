@@ -9,5 +9,3 @@ end
 rbenv_gem "bundler" do
   ruby_version node[:ruby_version]
 end
-
-

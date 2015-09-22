@@ -7,12 +7,16 @@ end
 
 # create nginx config
 template "#{node.nginx.dir}/sites-available/jenkins" do
-  source "jenkins.erb"
+  source 'jenkins.erb'
   notifies :reload, 'service[nginx]'
 end
 
+nginx_site 'default' do
+  enable false
+end
+
 # enable site
-nginx_site "jenkins" do
+nginx_site 'jenkins' do
   enable true
   notifies :reload, 'service[nginx]'
 end

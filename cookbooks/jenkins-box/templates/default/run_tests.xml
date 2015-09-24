@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description></description>
+  <description>reports from rspec and cucumber rake tasks e-mailed to git committer  </description>
   <keepDependencies>false</keepDependencies>
   <properties/>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.4.0">
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.0">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
@@ -36,19 +36,20 @@ bundle install                                           # Installs gems
 
 RAILS_ENV=test bundle exec rake db:drop
 RAILS_ENV=test bundle exec rake db:create
-RAILS_ENV=test bundle exec rake db:migrate
-RAILS_ENV=test bundle exec rake db:schema:load</command>
+RAILS_ENV=test bundle exec rake db:schema:load
+RAILS_ENV=test bundle exec rake db:test:prepare
+RAILS_ENV=test bundle exec rake ci:setup:rspec spec
+
+</command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers/>
-  <buildWrappers>
-    <ruby-proxy-object>
-      <ruby-object ruby-class="Jenkins::Plugin::Proxies::BuildWrapper" pluginid="rvm">
-        <pluginid pluginid="rvm" ruby-class="String">rvm</pluginid>
-        <object ruby-class="RvmWrapper" pluginid="rvm">
-          <impl ruby-class="NilClass" pluginid="rvm"/>
-        </object>
-      </ruby-object>
-    </ruby-proxy-object>
-  </buildWrappers>
+  <publishers>
+    <hudson.tasks.junit.JUnitResultArchiver plugin="junit@1.2-beta-4">
+      <testResults>spec/reports/*.xml</testResults>
+      <keepLongStdio>false</keepLongStdio>
+      <testDataPublishers/>
+      <healthScaleFactor>1.0</healthScaleFactor>
+    </hudson.tasks.junit.JUnitResultArchiver>
+  </publishers>
+  <buildWrappers/>
 </project>

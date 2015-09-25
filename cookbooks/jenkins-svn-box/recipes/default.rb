@@ -22,7 +22,6 @@ jenkins_plugin 'rake'
 jenkins_plugin 'campfire'
 jenkins_plugin 'greenballs'
 
-
 # pin the plugin that needs to upgrade
 # https://github.com/chef-cookbooks/jenkins/issues/122
 file "var/lib/jenkins/plugins/subversion.jpi.pinned" do
@@ -40,9 +39,14 @@ jenkins_plugin 'ruby-runtime' do
   notifies :restart, 'service[jenkins]', :immediately
 end
 
+# for some reason jenkins_plugin will not restart jenkins; using jenkins_command instead
+jenkins_command 'safe-restart'
+
 jenkins_plugin 'rbenv' do
   notifies :restart, 'service[jenkins]', :immediately
 end
+
+jenkins_command 'safe-restart'
 
 # template '/var/tmp/run_tests.xml' do
 #   source 'run_tests.xml'
@@ -53,4 +57,4 @@ end
 #   config '/var/tmp/run_tests.xml'
 # end
 
-jenkins_command 'safe-restart'
+

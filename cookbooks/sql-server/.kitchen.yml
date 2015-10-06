@@ -1,0 +1,15 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: win8.1-vbox-amd64
+
+suites:
+  - name: default
+    run_list:
+      - recipe[sql-server::default]
+    attributes:

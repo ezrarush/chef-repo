@@ -6,7 +6,7 @@ provisioner:
   name: chef_zero
 
 platforms:
-  - name: win8.1-vbox-amd64
+  - name: opentable/win-2012r2-standard-amd64-nocm
 
 suites:
   - name: default

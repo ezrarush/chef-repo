@@ -1,0 +1,5 @@
+source 'https://supermarket.chef.io'
+
+metadata
+
+cookbook 'logstash', git: 'https://github.com/lusis/chef-logstash.git'

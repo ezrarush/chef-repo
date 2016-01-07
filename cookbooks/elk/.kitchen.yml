@@ -1,0 +1,38 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+
+# Uncomment the following verifier to leverage Inspec instead of Busser (the
+# default verifier)
+# verifier:
+#   name: inspec
+
+platforms:
+  - name: ubuntu-14.04
+
+suites:
+  - name: default
+    run_list:
+      - recipe[elk::default]
+    attributes:
+      java:
+        install_flavor: "oracle"
+        jdk_version: "7"
+        oracle:
+          accept_oracle_download_terms: true
+      logstash:
+        instance:
+          server:
+            xms: '256M'
+            xmx: '256M'
+            config_templates:
+              input_syslog: 'config/input_syslog.conf.erb'
+              output_stdout: 'config/output_stdout.conf.erb'
+              output_elasticsearch: 'config/output_elasticsearch.conf.erb'
+            pattern_templates:
+              default: 'patterns/custom_patterns.erb'
+            elasticsearch_ip: '127.0.0.1'
+            enable_embedded_es: true

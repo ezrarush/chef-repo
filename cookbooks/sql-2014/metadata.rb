@@ -1,0 +1,7 @@
+name 'sql-2014'
+maintainer 'The Authors'
+maintainer_email 'you@example.com'
+license 'all_rights'
+description 'Installs/Configures sql-2014'
+long_description 'Installs/Configures sql-2014'
+version '0.1.0'
